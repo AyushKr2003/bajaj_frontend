@@ -42,7 +42,7 @@ class _HomePageState extends State<HomePage> {
       }
 
       final response = await http.post(
-        Uri.parse("http://127.0.0.1:5000/bfhl"),
+        Uri.parse("https://bajaj-backend-9ho7.onrender.com/bfhl"),
         headers: {"Content-Type": "application/json"},
         body: jsonEncode(decodedJson),
       );
@@ -111,7 +111,8 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("22BCS12351", style: TextStyle(fontWeight: FontWeight.bold,color: Colors.white)),
+        title:
+            Text("22BCS12351", style: TextStyle(fontWeight: FontWeight.bold)),
         backgroundColor: Colors.blue.shade700,
       ),
       body: SingleChildScrollView(
@@ -137,7 +138,8 @@ class _HomePageState extends State<HomePage> {
                   ),
                   focusedBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(8),
-                    borderSide: BorderSide(color: Colors.blue.shade700, width: 2),
+                    borderSide:
+                        BorderSide(color: Colors.blue.shade700, width: 2),
                   ),
                   hintText: 'Enter JSON data...',
                   fillColor: Colors.grey.shade50,
@@ -157,7 +159,10 @@ class _HomePageState extends State<HomePage> {
                 ),
                 child: Text(
                   "Submit",
-                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.white),
+                  style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white),
                 ),
               ),
               if (errorMessage != null)
